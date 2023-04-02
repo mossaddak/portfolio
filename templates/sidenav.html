@@ -1,0 +1,54 @@
+{% load static %}
+
+<!--__________ mobile view __________-->
+<div class="mossaddak_portfolio_topbar">
+    {% if messages %}
+    {% include 'message.html' %}
+    {% endif %}
+
+    <div class="topbar_inner">
+        <div class="logo">
+            <a href="/"><img src="{% static 'img/logo/dark.png' %}" alt="" /></a>
+        </div>
+        <div class="trigger">
+            <div class="hamburger hamburger--slider">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="mossaddak_portfolio_mobile_menu">
+    <div class="menu_list">
+        <ul class="transition_link">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#news">Research</a></li>
+            <li><a href="#contact">Testimonials</a></li>
+        </ul>
+    </div>
+</div>
+<!--_____ mibile view end _____-->
+
+
+<!-- others view -->
+<div class="leftpart">
+    <div class="leftpart_inner">
+        <div class="logo">
+            <a href="/"><img src="{% static 'img/logo/dark.png' %}" alt="" /></a>
+        </div>
+        <div class="menu">
+            <ul class="transition_link">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#news">Research</a></li>
+                <li><a href="#contact">Testimonials</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

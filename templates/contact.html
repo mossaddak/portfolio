@@ -1,0 +1,85 @@
+{% load static %}
+
+<style>
+
+.carousel-item{
+    background-color: white;
+    margin:20px 0px;
+    padding:10px;
+}
+.testimonial_heading{
+    color: black;
+}
+.carousel-indicators button{
+    color: black;
+    background-color: black !important;
+}
+.carousel_icon{
+    border-radius: 50%;
+    padding: 10px !important;
+    font-size: 30px !important;
+    color: black;
+    transform: translateY(100px);
+}
+.testimonial_icon{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.carousel{
+    overflow: hidden;
+}
+
+
+
+</style>
+
+<div id="contact" class="mossaddak_portfolio_section pt-5">
+    <div class="container">
+        <div class="contact">
+            <div class="">
+                <div class="title_flex">
+                    <div class="left">
+                        <span class="p-2"
+                            style="color: black; font-size:12px; font-weight: 600; background-color: #EEEEEE;">TESTIMONIAL</span>
+                        <h3 class="mt-3" style="font-size: 30px; font-weight:800; color: black;">What Clients Say</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="fields">
+
+
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators pb-2">
+                        {% for i in banner_range %}
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{i}}" class="active" aria-current="true" aria-label="Slide {{i}}"></button>
+                        {% endfor %}
+                    </div>
+                    <div class="carousel-inner">
+
+                        {% for testimonial in testimonials %}
+                        <div class="carousel-item {% if forloop.first %} active {% endif %} p-5">
+                            <img src="{{ testimonial.image.url }}" class="d-block w-100" alt="...">
+                            
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel_icon" aria-hidden="true"><i class="fas fa-arrow-circle-left testimonial_icon"></i></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel_icon" aria-hidden="true"><i class="fas fa-arrow-circle-right testimonial_icon"></i></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

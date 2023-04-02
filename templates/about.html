@@ -1,0 +1,49 @@
+{% load static %}
+<div id="about" class="mossaddak_portfolio_section">
+    <div class="container">
+        
+        {% for AboutME in AboutME %}
+        <div class="about_section">
+            <div class="about_image">
+                <img src="{{AboutME.Photo.url}}" alt="" />
+                <div class="main" data-img-url="{% static 'img/slider/1.jpg' %}"></div>
+            </div>
+
+            <div class="description">
+                <h3 class="name">{{AboutME.Name}}  <span></span></h3>
+
+                <div class="description_inner">
+
+                    
+                    <div class="left">
+                        <p>
+                            {{AboutME.Profile}}
+                        </p>
+                        <div class="mossaddak_portfolio_btn">
+                            <a href="#" class="skill_experience_btn">SKILL & EXPERIENCE</a>
+                        </div>
+                    </div>
+
+
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <p><span>Address</span><a class="href_location" href="#!">: {{AboutME.Address}}</a></p>
+                            </li>
+                            <li>
+                                <p><span>Email</span><a href="#!">: mossaddak15-2413@diu.edu.bd</a></p>
+                            </li>
+                            <li>
+                                <p><span>Study</span><a class="href_location" href="#" target="_blank">: {{AboutME.Study}}</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        {% endfor %}
+
+    </div>
+</div>

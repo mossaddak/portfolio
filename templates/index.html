@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div id="preloader">
+    <div class="loader_line"></div>
+</div>
+
+<div class="all_wrap" data-magic-cursor="show" data-color="black" data-enter="fadeInLeft" data-exit="">
+
+
+<!-- sidenav -->
+{% include 'sidenav.html' %}
+
+
+
+    <div class="rightpart">
+        <div class="rightpart_in">
+
+            <!-- home -->
+            {% include 'home.html' %}
+
+            <!-- about -->
+            {% include 'about.html' %}
+
+            <!-- skill & experience -->
+            {% include 'skil&experience.html' %}
+
+    
+
+            <div class="mossaddak_portfolio_titles"></div>
+
+            <!-- projects -->
+            {% include 'projects.html' %}
+
+            <!-- reasearch -->
+            {% include 'research.html' %}
+
+            <!-- contact -->
+            {% include 'contact.html' %}
+
+        </div>
+    </div>
+
+
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+
+</div>
+
+{% endblock %}
+
+
+

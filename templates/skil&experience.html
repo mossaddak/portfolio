@@ -1,0 +1,86 @@
+{% load static %}
+<div class="mossaddak_portfolio_modalbox">
+    <div class="box_inner">
+        <div class="close">
+            <a href="#"><i class="icon-cancel"></i></a>
+        </div>
+        <div class="description_wrap">
+            <div class="my_box">
+
+                <!-- FrontendSkill -->
+                <div class="left">
+                    <div class="about_title">
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="mt-3">
+                        {% for FrontendSkill in FrontendSkill %}
+                        <div class="skill my-1">{{FrontendSkill.Title}}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- BackendSkill -->
+                <div class="right">
+                    <div class="about_title">
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="mt-3">
+                        {% for BackendSkill in BackendSkill %}
+                        <div class="skill my-1">{{BackendSkill.Title}}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="counter">
+                <div class="about_title">
+                    <h3>Projects</h3>
+                </div>
+                <ul>  
+                    {% for ProjectCount in ProjectCount %}
+                    <li>
+                        <div class="list_inner">
+                            <h3><span class=" counter">{{ProjectCount.TotalProjects}}+</span></h3>
+                            <span class="name">Projects Completed</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_inner">
+                            <h3><span class=" counter">{{ProjectCount.TotalCliens}}+</span></h3>
+                            <span class="name">Satisfied Clients</span>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="list_inner">
+                            <h3><span class=" counter">{{ProjectCount.ServiceCountry}}+</span></h3>
+                            <span class="name">Countries</span>
+                        </div>
+                    </li>
+
+                    
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+            <!--
+            <div class="partners">
+                <div class="about_title">
+                    <h3>My Partners</h3>
+                </div>
+                <ul class="owl-carousel">
+                    <li class="item"><a href="#"><img src="img/partners/1.png" alt="" /></a></li>
+                    <li class="item"><a href="#"><img src="img/partners/2.png" alt="" /></a></li>
+                    <li class="item"><a href="#"><img src="img/partners/3.png" alt="" /></a></li>
+                    <li class="item"><a href="#"><img src="img/partners/4.png" alt="" /></a></li>
+                    <li class="item"><a href="#"><img src="img/partners/5.png" alt="" /></a></li>
+                    <li class="item"><a href="#"><img src="img/partners/6.png" alt="" /></a></li>
+                    <li class="item"><a href="#"><img src="img/partners/7.png" alt="" /></a></li>
+                    <li class="item"><a href="#"><img src="img/partners/8.png" alt="" /></a></li>
+                </ul>
+            </div>
+            --> 
+
+
+        </div>
+    </div>
+</div>

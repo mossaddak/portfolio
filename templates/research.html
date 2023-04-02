@@ -1,0 +1,67 @@
+{% load static %}
+<div id="news" class="mossaddak_portfolio_section">
+    <div class="container">
+        <div class="research">
+            <div class="research_title">
+                <div class="title_flex">
+                    <div class="left my-3">
+                        <span class="p-2 oke"
+                            style="color: black; font-size:12px; font-weight: 600; background-color: #EEEEEE;">RESEARCH</span>
+                        <h3 class="mt-3" style="font-size: 30px; font-weight:800; color: black;">Click To See</h3>
+                    </div>
+                </div>
+            </div>
+            <ul>
+
+                {% for Research in Research %}
+                <li>
+                    <div class="list_inner pt-3">
+                        <div class="image">
+                            <img src="{% static 'img/thumbs/4-3.jpg' %}" alt="research paper image" />
+                            <div class="main" data-img-url="{{Research.Photo.url}}"></div>
+                            <a class="research_full_link" target="_blank" href="{{Research.PaperLink}}"></a>
+                        </div>
+                        <div class="details">
+                            <div class="extra">
+                                <div class="short">
+                                    <p class="date" style="font-size:13px;">By
+                                        <!-- authors -->
+                                        <a href="{{Research.PaperLink}}" class="text-muted" style="text-decoration:none;">{{Research.Authors|safe}}</a>
+                                        
+                                        <!-- publication date -->
+                                        <span>
+                                            {{Research.PublishedDate|date:'d'}} 
+                                            {{Research.PublishedDate|date:'M'}}
+                                            {{Research.PublishedDate|date:'Y'}}
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- research paper heading -->
+                            <h3 class="title">
+                                <a href="{{Research.PaperLink}}" class="research_paper_title" style="font-size: 17px;" target="_blank">
+                                    {{Research.Title|slice:80}}...
+                                </a>
+                            </h3>
+
+                            <!-- read more btn -->
+                            <div class="reasearch_read_more">
+                                <a href="{{Research.PaperLink}}" target="_blank"><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- <script>
+                    $(function () {
+                        a = "{{Research.Title}}".slice(0,60);
+                        $(".research_paper_title").text(a);
+                    }); 
+                </script> -->
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
